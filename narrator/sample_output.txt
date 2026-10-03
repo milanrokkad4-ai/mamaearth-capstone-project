@@ -1,0 +1,8 @@
+**Situation**  
+Mamaearth's verified financial analysis establishes a cleaned total revenue of INR 97358.3, adjusted from a raw total revenue before cleaning of INR 99860.2 following a reconciliation delta of INR 2501.9 due to duplicate removal. Performance across digital payment channels shows relatively controlled return rates, with CARD recording a return rate of 14.7% and UPI recording 18.9%. Furthermore, baseline trend analysis confirms that the true peak revenue month is 2026-03, generating revenue of INR 20318.9.
+
+**Complication**  
+Operational efficiency and reported top-line figures have been distorted by data anomalies and cash-on-delivery exposure. An outlier-inflated month occurred in 2026-01, where an apparent revenue of INR 29582.1 masked a corrected revenue of INR 11637.1. Concurrently, product returns are heavily skewed by fulfillment terms: COD orders exhibit an overall return rate of 44.4%. This friction is most severe in the identified highest-risk segment—COD orders originating from city_tier 2—which registers a return rate of 54.5%.
+
+**Resolution**  
+Regional operations and finance teams must immediately adopt the cleaned revenue baseline of INR 97358.3 for planning and reconcile performance reports against the 2026-01 corrected revenue of INR 11637.1. To mitigate margin erosion from high reverse logistics, operations must implement targeted interventions on the COD channel to bring its 44.4% return rate closer to the rates seen in UPI (18.9%) and CARD (14.7%). Priority intervention must be directed at city_tier 2 COD transactions to reverse the 54.5% return rate peak, while operational capacity is aligned to support genuine peak sales volume demonstrated by the INR 20318.9 revenue achieved in 2026-03.

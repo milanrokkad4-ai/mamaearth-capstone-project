@@ -208,6 +208,39 @@ print(f"\nJanuary's apparent lead in the uncorrected series is an artifact of th
 
 
 # ---------------------------------------------------------------------------
-# Task 5 (part 2) export: write verified findings for narrator/findings.json use later
-# (kept here only as a note for Part 3 - no file written in this script)
+# Part 3, Task 1: Export verified findings for narrator/findings.json
+# Written here by code, never hand-typed, so it can never drift from the
+# real Part 1 + Part 2 numbers above.
 # ---------------------------------------------------------------------------
+import json
+
+findings = {
+    "cleaned_total_revenue_inr": round(cleaned_total, 2),
+    "raw_total_revenue_inr": raw_total,
+    "duplicate_reconciliation_delta_inr": round(delta, 2),
+    "return_rate_by_payment": {
+        "COD": return_rates.loc['COD', 'mean'],
+        "CARD": return_rates.loc['CARD', 'mean'],
+        "UPI": return_rates.loc['UPI', 'mean']
+    },
+    "highest_risk_segment": {
+        "payment_method": highest_risk[0],
+        "city_tier": int(highest_risk[1]),
+        "return_rate_pct": highest_rate
+    },
+    "true_peak_month": {
+        "month": str(monthly_without_outliers.idxmax()),
+        "revenue_inr": float(monthly_without_outliers.max())
+    },
+    "outlier_inflated_month": {
+        "month": "2026-01",
+        "apparent_revenue_inr": float(monthly_with_outliers.loc['2026-01']),
+        "corrected_revenue_inr": float(monthly_without_outliers.loc['2026-01'])
+    }
+}
+
+with open('narrator/findings.json', 'w') as f:
+    json.dump(findings, f, indent=2)
+
+print("\nWrote narrator/findings.json")
+print(json.dumps(findings, indent=2))
